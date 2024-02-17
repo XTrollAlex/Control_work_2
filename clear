@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#Clear script
+
+if [ -d $1 ]
+	then
+		echo "Dir OK"
+	else
+		echo "No dir"
+		exit 2
+fi
+
+directory=$1 #set variable
+temp_files=$(rm $directory *.bak *.tmp *.backup)
